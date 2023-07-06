@@ -13,7 +13,7 @@ function Card({ character }) {
             className="w-full h-48 object-cover"
             src={
               character.images
-                ? character.images
+                ? character.images[0]
                :"https://i.quotev.com/kik36hpugfra.jpg"
             }
             alt="Card Image"
