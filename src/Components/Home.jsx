@@ -88,17 +88,23 @@ function Home() {
             <Card character={character} key={character.id} /> // Rendering the Card component for each character in the filteredData array
           ))}
         </div>
+      </div>
+
+      <div
+        className={`flex ${count > 1 ? "justify-between" : "justify-end"}`}
+      >
         {count > 1 && (
           <button
             onClick={handlePreviousPage}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-110 "
+            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-110"
           >
             Prev.
           </button>
         )}
+
         <button
           onClick={handleNextPage}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg ml-auto transition duration-300 ease-in-out transform hover:scale-110"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-110"
         >
           Next
         </button>
