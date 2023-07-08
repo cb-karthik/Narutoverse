@@ -1,5 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Importing the Link component from react-router-dom
 
+/**
+ * Card component represents a card displaying information about a character.
+ * @param {Object} character - The character object containing information.
+ */
 function Card({ character }) {
   return (
     <Link

@@ -7,7 +7,7 @@ function App() {
   return (
     
     <BrowserRouter>
-      
+     
       <Routes>
         <Route path="/character/:characterName" element={<CardDetails />} />
         <Route path="/" element={<Home />} />

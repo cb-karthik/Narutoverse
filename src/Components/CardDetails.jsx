@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import Header from "./Header";
+import { useEffect, useState } from "react"; // Importing the useEffect and useState hooks from the React library
+import { useParams } from "react-router-dom"; // Importing the useParams hook from the react-router-dom library
+import Header from "./Header"; // Importing the Header component
 
 function CardDetails() {
-  const params = useParams();
-  const [characterData, setCharacterData] = useState([]);
+  const params = useParams(); // Getting the URL parameters using the useParams hook
+  const [characterData, setCharacterData] = useState([]); // Initializing a state variable to store the character data
 
   useEffect(() => {
     fetchCharacterData();
@@ -14,9 +14,9 @@ function CardDetails() {
     try {
       const response = await fetch(
         `https://api.narutodb.xyz/character/search?name=${params.characterName}`
-      );
+      ); // Sending a request to fetch character data based on the character name parameter from the URL
       const data = await response.json();
-      setCharacterData(data);
+      setCharacterData(data); // Updating the character data state with the fetched data
     } catch (error) {
       console.log("Error fetching character data:", error);
     }
@@ -26,6 +26,7 @@ function CardDetails() {
 
   return (
     <div className="p-4 w-full bg-gradient-to-tl from-gray-900 via-gray-800 to-gray-900 sm:h-screen overflow-x-hidden">
+      
       <Header />
       <div className="flex flex-col sm:flex-row mt-5 h-[calc(100%-5.5rem)]">
         <div className="flex-[0.5] h-full w-full relative overflow-hidden">
