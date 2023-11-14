@@ -20,7 +20,8 @@ function Home() {
     try {
       // Fetching character data from the API
       const response = await fetch(
-        `https://api.narutodb.xyz/character?page=${count}&limit=20`
+        `https://narutodb.xyz/api/character?page=${count}&limit=20`
+        
       );
 
       const data = await response.json(); // Parsing the response data

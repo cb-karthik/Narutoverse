@@ -13,7 +13,7 @@ function CardDetails() {
   const fetchCharacterData = async () => {
     try {
       const response = await fetch(
-        `https://api.narutodb.xyz/character/search?name=${params.characterName}`
+        `https://narutodb.xyz/api/character/search?name=${params.characterName}`
       ); // Sending a request to fetch character data based on the character name parameter from the URL
       const data = await response.json();
       setCharacterData(data); // Updating the character data state with the fetched data
